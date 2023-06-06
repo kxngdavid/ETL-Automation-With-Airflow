@@ -1,0 +1,6 @@
+[Credentials]
+username = "enter your database username here"
+host = "enter the name of your host here"
+password = "enter your database password here"
+port = "enter your port number here"
+db_name = "enter the name of your database here" 
