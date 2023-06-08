@@ -36,7 +36,7 @@ Following these instructions will get the project up and running on your local m
 
 ## Usage
 
--  After the execution check your Postgres database to be sure a table named **jokes_data** has been created
+-  After executing the ```etl_pipeline.py`` file above, check your Postgres database to be sure a table named ```jokes_data``` has been created
     and populated with 10 rows of data from the API.
  	
 -  Open up your cmd/terminal and navigate to the cloned repository. Make sure you are inside the repository at
