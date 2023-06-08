@@ -5,9 +5,11 @@ This project focuses on automating a workflow. The workflow fetches semi-structu
 every two (2) minutes, transforms it into a structured format, and dumps the data into a PostgreSQL database.
 
 
+
 ## Prerequisites
 - Docker
 - PostgreSQL
+
 
 
 ## Getting Started
@@ -29,7 +31,7 @@ Following these instructions will get the project up and running on your local m
 -  Open and run the ```etl_pipeline.py``` file.
 
 
-### Usage
+## Usage
 
 -  After the execution check your Postgres database to be sure a table named **jokes_data** has been created
     and populated with 10 rows of data from the API.
