@@ -6,9 +6,12 @@ every two (2) minutes, transforms it into a structured format, and dumps the dat
 
 
 
+
 ## Prerequisites
 - Docker
 - PostgreSQL
+
+
 
 
 
