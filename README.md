@@ -27,7 +27,7 @@ Following these instructions will get the project up and running on your local m
 
 -  Open the **"postgres_db_credentials.txt"** file in the repository and set your PostgreSQL database credentials.
 
--  Navigate through the Airflow folder into the dags folder. Locate the "db_config_airflow.txt" file and set 
+-  Navigate through the Airflow folder into the dags folder. Locate the **"db_config_airflow.txt"** file and set 
     the credentials for the PostgreSQL database. NB: For this specific file, please bear in mind that this is what your localhost
     should be set to : ```host.docker.internal```
 
