@@ -58,9 +58,9 @@ Following these instructions will get the project up and running on your local m
 ## Closing the Project
 
 - To stop the process in a safe way, you can open another cmd window and navigate 
-    the directory of your cloned repo just like in step 7.
+    the directory of your cloned repo just like we did previously.
 
-- Once you're there, type docker-compose down.
+- Type ```docker-compose down```
 
 - After, open Docker, select the containers tab, stop any running containers, and close Docker. 
 
