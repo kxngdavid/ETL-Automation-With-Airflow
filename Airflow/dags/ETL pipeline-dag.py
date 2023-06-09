@@ -1,3 +1,4 @@
+# importing relevant libraries for this project
 import json
 import requests
 from airflow import DAG
@@ -9,7 +10,7 @@ from pandas.io.json import json_normalize
 from sqlalchemy import create_engine
 import os
 
-
+# function to fetch and transform data from the api
 def get_jokes():
     url = r"https://official-joke-api.appspot.com/random_ten"
     response = requests.get(url)
@@ -19,6 +20,7 @@ def get_jokes():
     dataframe = json_normalize(data=data)
     return dataframe
 
+# function to insert the data into the database
 def insert_data():
 
     #getting absolute path of current directory
@@ -92,13 +94,14 @@ def insert_data():
     cursor.close()
     connection.close()
 
-
+# defining default arguments for the DAG
 default_args = {
     "owner": "airflow",
     "start_date": datetime(2023, 6, 5),
     "retries": 1,
 }
 
+# defining the DAG
 dag = DAG(
     "get_jokes_and_insert_into_postgres",
     default_args=default_args,
@@ -106,8 +109,10 @@ dag = DAG(
     schedule_interval=timedelta(minutes=2),
 )
 
+# defining our tasks 
 t1 = PythonOperator(task_id="get_jokes", python_callable=get_jokes, dag=dag)
 
 t2 = PythonOperator(task_id="insert_data", python_callable=insert_data, dag=dag)
 
+# defining the dependencies of our tasks
 t1 >> t2
